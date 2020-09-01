@@ -24,8 +24,8 @@
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-sm navbar-light navbar-primary">
     <div class="container-fluid navbar-light rounded py-2 px-3">
-      <a href="/" class="navbar-brand border-right pr-3">
-        <img src="../../dist/img/logo.png" alt="KPPN Kediri" class="brand-image"
+      <a href="{{route('home')}}" class="navbar-brand border-right pr-3">
+        <img src="{{asset('dist/img/logo.png')}}" alt="KPPN Kediri" class="brand-image"
              style="opacity: .8">
         <span class="brand-text font-weight-light">Survey KPPN Kediri </span>
       </a>

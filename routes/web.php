@@ -12,9 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
+
+Route::get('/login',function (){
+	return view('auth.login');
+})->name('login');
+
+Route::post('/loginPost', 'UserController@loginPost')->name('req.login');
+Route::get('/logout', 'UserController@logout')->name('logout');
+
 Route::get('/', function (){
-	return view('AdminLTE/pages/guest/index');
-});
+	return view('other.index');
+})->name('home');
 
 Route::get('/dashboard',function (){
 	return view('AdminLTE/pages/dashboard');
@@ -34,12 +44,9 @@ Route::post('pertanyaan/savepertanyaan','PertanyaanController@store')->name('ins
 Route::get('/pantaujawaban',function (){
 	return view('AdminLTE/pages/pantaujawaban');
 });
-Route::get('/login',function (){
-	return view('login-admin');
-});
 
-Route::post('/loginPost', 'UserController@loginPost');
-Route::get('/logout', 'UserController@logout');
+
 Route::get('/notlogin', 'UserController@notLogin');
+
 
 

@@ -1,4 +1,4 @@
-@extends('adminlte/index-guest')
+@extends('layouts/index-guest')
 @section('guest-content')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

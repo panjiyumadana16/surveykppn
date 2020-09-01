@@ -46,7 +46,7 @@
     </div>
       <p class="login-box-msg">Welcome Admin!</p>
 
-      <form action="{{ url('/loginPost') }}" method="post">
+      <form action="{{ route('req.login') }}" method="post">
         {{csrf_field()}}
         <div class="input-group mb-3">
           <input type="username" class="form-control" required="" name="username" placeholder="Username">
@@ -83,11 +83,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
